@@ -4,9 +4,7 @@
 #插件配置：false（关闭）  true（开启）
 
 #脏话屏蔽开关
-PlayChatEvent: false
-#烂梗屏蔽开关
-Stem: false
+enable: true
 
 #该项为欢迎人物
 Characters: '[幻梦娘]'
@@ -22,5 +20,8 @@ Sleep: '这么晚才睡嘛？要好好睡觉哦ヾ(≧O≦)〃'
 Getup: '这么早就起床嘛？不如再睡一觉吧✧(◍˃̶ᗜ˂̶◍)✩'
 #该句为玩家说脏话时的警告语句
 Alert: '请注意文明哦(ꐦ ಠ 皿 ಠ) '
-#该项为玩家发送烂梗的警告语句
-Stemalert: '请适度玩梗 →_→'
+
+#脏话屏蔽关键词
+BadWorlds:
+  - 'sb'
+  - 'fuck'
