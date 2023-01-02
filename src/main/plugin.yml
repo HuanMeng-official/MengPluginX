@@ -1,0 +1,25 @@
+name: MengPluginX
+version: '${project.version}'
+main: huanmeng.mengpluginx.MengPluginX
+api-version: 1.16
+softdepend:
+  - PlaceholderAPI
+commands:
+  ping:
+    description: Viewer the player ping
+  tps:
+    description: Viewer the server TPS
+  mpx:
+    description: Check if the plugin is started
+  gm0:
+    description: Set Player Game Mode Survival
+  gm1:
+    description: Set Player Game Mode Creative
+  gm2:
+    description: Set Player Game Mode Adventure
+  gm3:
+    description: Set Player Game Mode Spectator
+permissions:
+  mpx.huanmeng.op:
+    description: Permission
+    default: op
