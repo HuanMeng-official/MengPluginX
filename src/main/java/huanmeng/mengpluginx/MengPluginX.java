@@ -19,8 +19,7 @@ public final class MengPluginX extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerJoinEvent(),this);
         getServer().getPluginManager().registerEvents(new PlayerBedEnterEvent(),this);
         getServer().getPluginManager().registerEvents(new PlayerBedLeaveEvent(),this);
-        getServer().getPluginManager().registerEvents(new DirtyWords(),this);
-        getServer().getPluginManager().registerEvents(new StemWords(),this);
+        getServer().getPluginManager().registerEvents(new BadWorlds(),this);
         Objects.requireNonNull(getCommand("mpx")).setExecutor(new MengPluginXCommands());
         Objects.requireNonNull(getCommand("gm0")).setExecutor(new SetSurvival());
         Objects.requireNonNull(getCommand("gm1")).setExecutor(new SetCreative());
