@@ -5,6 +5,8 @@ api-version: 1.16
 softdepend:
   - PlaceholderAPI
 commands:
+  online_player:
+    description: Viewer server online players
   ping:
     description: Viewer the player ping
   tps:
