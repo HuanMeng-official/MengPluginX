@@ -9,9 +9,9 @@ commands:
     description: Get the world seed
   online_player:
     description: Viewer server online players
-  ping:
+  mpx_ping:
     description: Viewer the player ping
-  tps:
+  mpx_tps:
     description: Viewer the server TPS
   mpx:
     description: Check if the plugin is started
