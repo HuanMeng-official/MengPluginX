@@ -25,8 +25,8 @@ public final class MengPluginX extends JavaPlugin {
         Objects.requireNonNull(getCommand("gm1")).setExecutor(new SetCreative());
         Objects.requireNonNull(getCommand("gm2")).setExecutor(new SetAdventure());
         Objects.requireNonNull(getCommand("gm3")).setExecutor(new SetSpectator());
-        Objects.requireNonNull(getCommand("tps")).setExecutor(new GetServerTPS());
-        Objects.requireNonNull(getCommand("ping")).setExecutor(new GetPlayerPing());
+        Objects.requireNonNull(getCommand("mpx_tps")).setExecutor(new GetServerTPS());
+        Objects.requireNonNull(getCommand("mpx_ping")).setExecutor(new GetPlayerPing());
         Objects.requireNonNull(getCommand("online_player")).setExecutor(new GetOnlinePlayer());
         Objects.requireNonNull(getCommand("mpx_seed")).setExecutor(new GetWorldSeed());
     }
