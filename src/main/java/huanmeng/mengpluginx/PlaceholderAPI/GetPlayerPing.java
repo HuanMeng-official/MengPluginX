@@ -15,7 +15,7 @@ public class GetPlayerPing implements CommandExecutor {
             Player player = (Player) sender;
             String ping = "%player_ping%";
             ping = PlaceholderAPI.setPlaceholders(player,ping);
-            sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "您当前的Ping为" + ChatColor.GREEN + ping);
+            sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "您当前的Ping为：" + ChatColor.GREEN + ping + ChatColor.WHITE + "ms");
         }else {
             System.out.println("Error: Please let the player execute the command");
         }
