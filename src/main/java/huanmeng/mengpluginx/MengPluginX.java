@@ -3,6 +3,7 @@ package huanmeng.mengpluginx;
 import huanmeng.mengpluginx.Commands.*;
 import huanmeng.mengpluginx.PlayerEvents.*;
 import huanmeng.mengpluginx.PlaceholderAPI.*;
+import huanmeng.mengpluginx.Words.*;
 import huanmeng.mengpluginx.Worlds.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -19,7 +20,7 @@ public final class MengPluginX extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerJoinEvent(),this);
         getServer().getPluginManager().registerEvents(new PlayerBedEnterEvent(),this);
         getServer().getPluginManager().registerEvents(new PlayerBedLeaveEvent(),this);
-        getServer().getPluginManager().registerEvents(new BadWorlds(),this);
+        getServer().getPluginManager().registerEvents(new BadWords(),this);
         Objects.requireNonNull(getCommand("mpx")).setExecutor(new MengPluginXCommands());
         Objects.requireNonNull(getCommand("gm0")).setExecutor(new SetSurvival());
         Objects.requireNonNull(getCommand("gm1")).setExecutor(new SetCreative());
