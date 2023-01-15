@@ -5,6 +5,8 @@ api-version: 1.16
 softdepend:
   - PlaceholderAPI
 commands:
+  mpx_time:
+    description: Get the world full_time
   mpx_seed:
     description: Get the world seed
   online_player:
