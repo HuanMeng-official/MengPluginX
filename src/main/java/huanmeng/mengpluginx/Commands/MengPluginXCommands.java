@@ -15,8 +15,8 @@ public class MengPluginXCommands implements CommandExecutor {
             sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "插件已启用了哦(ᗒᗩᗕ)՞");
             sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "如果Ping和TPS命令无法使用请输入papi ecloud download Player和papi ecloud download Server命令下载PAPI依赖并重启PAPI");
         } else if (sender instanceof ConsoleCommandSender) {
-            System.out.println("\033[33;0m" + "[幻梦娘]" + "\033[0m" + "插件已启用了哦(ᗒᗩᗕ)՞");
-            System.out.println("\033[33;0m" + "[幻梦娘]" + "\033[0m" + "如果Ping和TPS命令无法使用请输入papi ecloud download Player和papi ecloud download Server命令下载PAPI依赖并重启PAPI");
+            System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "插件已启用了哦(ᗒᗩᗕ)՞");
+            System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "如果Ping和TPS命令无法使用请输入papi ecloud download Player和papi ecloud download Server命令下载PAPI依赖并重启PAPI");
         }
         return false;
     }

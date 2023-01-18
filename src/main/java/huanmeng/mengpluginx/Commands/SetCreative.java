@@ -15,7 +15,7 @@ public class SetCreative implements CommandExecutor {
             ((Player) sender).setGameMode(GameMode.CREATIVE);
             player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "已将您的游戏模式更换为创造");
         }else{
-            System.out.println("Error: Please let the player execute the command");
+            System.out.println(ChatColor.RED + "Error: Please let the player execute the command");
         }
         return false;
     }

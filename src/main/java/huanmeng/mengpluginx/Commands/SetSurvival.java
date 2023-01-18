@@ -15,7 +15,7 @@ public class SetSurvival implements CommandExecutor {
             ((Player) sender).setGameMode(GameMode.SURVIVAL);
             player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "已将您的游戏模式更换为生存");
         }else{
-            System.out.println("Error: Please let the player execute the command");
+            System.out.println(ChatColor.RED + "Error: Please let the player execute the command");
         }
         return false;
     }
