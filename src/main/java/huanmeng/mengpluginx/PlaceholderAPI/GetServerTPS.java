@@ -17,7 +17,7 @@ public class GetServerTPS implements CommandExecutor {
             tps = PlaceholderAPI.setPlaceholders(player,tps);
             sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "当前服务器TPS为：" + ChatColor.GREEN + tps);
         }else {
-            System.out.println("Error: Please let the player execute the command");
+            System.out.println(ChatColor.RED + "Error: Please let the player execute the command");
         }
         return false;
     }
