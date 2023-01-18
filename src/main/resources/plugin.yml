@@ -6,7 +6,7 @@ softdepend:
   - PlaceholderAPI
 commands:
   mpx_uuid:
-    description: Get UUID
+    description: Get Player UUID
   mpx_time:
     description: Get the world full_time
   mpx_seed:
@@ -19,14 +19,8 @@ commands:
     description: Viewer the server TPS
   mpx:
     description: Check if the plugin is started
-  gm0:
-    description: Set Player Game Mode Survival
-  gm1:
-    description: Set Player Game Mode Creative
-  gm2:
-    description: Set Player Game Mode Adventure
-  gm3:
-    description: Set Player Game Mode Spectator
+  gm:
+    description: Set Player Game Mode
 permissions:
   mpx.huanmeng.op:
     description: Permission
