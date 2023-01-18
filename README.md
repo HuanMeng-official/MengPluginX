@@ -1,5 +1,5 @@
 # 😯MengPluginX介绍
-# MPX是<a href="https://github.com/huanmeng-official/automaticwelcomeplugin">AutomaticWelcomePlugin</a>的代码重置版
+# MPX是由<a href="https://space.bilibili.com/626446902">幻梦official</a>制作的一款服务器辅助管理插件
 # 🧐我该怎么使用MengPluginX？
 # 下载<a href="https://www.spigotmc.org/">Spigot</a>并启动
 # 然后将MPX放入plugins文件夹，再次启动服务器
