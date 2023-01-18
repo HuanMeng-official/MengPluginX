@@ -5,6 +5,8 @@ api-version: 1.16
 softdepend:
   - PlaceholderAPI
 commands:
+  mpx_uuid:
+    description: Get UUID
   mpx_time:
     description: Get the world full_time
   mpx_seed:
