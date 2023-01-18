@@ -15,7 +15,7 @@ public class GetFullTime implements CommandExecutor {
             String full_time = String.valueOf(player.getWorld().getFullTime());
             sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "当前世界的绝对时间：" + ChatColor.GREEN + full_time);
         }else {
-            System.out.println("Error: Please let the player execute the command");
+            System.out.println(ChatColor.RED + "Error: Please let the player execute the command");
         }
         return false;
     }
