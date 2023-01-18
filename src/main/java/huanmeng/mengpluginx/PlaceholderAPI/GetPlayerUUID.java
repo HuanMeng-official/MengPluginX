@@ -16,7 +16,7 @@ public class GetPlayerUUID implements CommandExecutor {
             Player player = (Player) sender;
             Player target = (Player) Bukkit.getPlayerExact(args[0]);
             String uuid = "%player_uuid%";
-            uuid = PlaceholderAPI.setPlaceholders(player,uuid);
+            uuid = PlaceholderAPI.setPlaceholders(target,uuid);
             if (target != null){
                 sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "该玩家的UUID为：" + ChatColor.GREEN + uuid);
             }
