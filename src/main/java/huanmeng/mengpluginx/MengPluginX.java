@@ -5,7 +5,6 @@ import huanmeng.mengpluginx.PlayerEvents.*;
 import huanmeng.mengpluginx.PlaceholderAPI.*;
 import huanmeng.mengpluginx.Words.*;
 import huanmeng.mengpluginx.Worlds.*;
-import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
@@ -15,7 +14,7 @@ public final class MengPluginX extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        System.out.println(ChatColor.GREEN + "插件正在加载");
+        System.out.println("插件正在加载");
         getConfig().options().copyDefaults();
         saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new PlayerJoinEvent(),this);
