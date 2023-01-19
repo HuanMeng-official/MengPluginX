@@ -47,9 +47,7 @@ java -Xms100m -Xmx2048m -jar server.jar nogui
 
 ---
 
-📝 责任声明：
-
----
+📝 声明：
 
 **MengPluginX** 是基于AutomaticWelcomePlugin[^作者]的优化改良版本，拥有AutomaticWelcome的所有功能，并加以改进
 
