@@ -37,9 +37,7 @@ MengPluginX的功能/优势：
 
 启动Spigot/Paper命令：
 
-```
-java -Xms100m -Xmx2048m -jar server.jar nogui
-```
+`java -Xms100m -Xmx2048m -jar server.jar nogui`
 
 ### 2. 使用现有支持Spigot插件的服务端，并将MPX放入plugins文件夹
 
