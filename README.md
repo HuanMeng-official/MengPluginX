@@ -6,7 +6,7 @@
 
 ---
 
-🤔什么是MengPluginX？
+## 🤔什么是MengPluginX？
 
 
 [MengPluginX](https://github.com/HuanMeng-official/MengPluginX) 是由 [幻梦official](https://space.bilibili.com/626446902) 开发的一款服务器辅助管理插件，如果遇到各种问题可以提交 [Issue](https://github.com/HuanMeng-official/MengPluginX/issues)
@@ -47,7 +47,7 @@ java -Xms100m -Xmx2048m -jar server.jar nogui
 
 ---
 
-📝 声明：
+## 📝 声明：
 
 **MengPluginX** 是基于AutomaticWelcomePlugin[^作者]的优化改良版本，拥有AutomaticWelcome的所有功能，并加以改进
 
@@ -57,7 +57,7 @@ java -Xms100m -Xmx2048m -jar server.jar nogui
 
 ---
 
-🔨构建MengPluginX
+## 🔨构建MengPluginX
 
 - `git clone https://github.com/HuanMeng-official/MengPluginX.git`
 
@@ -73,7 +73,7 @@ java -Xms100m -Xmx2048m -jar server.jar nogui
 
 ---
 
-📋数据统计
+## 📋数据统计
 
 ![User](https://img.shields.io/badge/User-2人-blue?style=flat-square) ![Issue](https://img.shields.io/badge/Issue-0次-blue?style=flat-square) ![Release](https://img.shields.io/badge/Release-14个-blue?style=flat-square)
 
