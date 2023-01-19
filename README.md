@@ -4,9 +4,10 @@
 
 ![MIT License](https://img.shields.io/badge/开源协议-MIT-green?style=flat-square) ![简体中文](https://img.shields.io/badge/简体中文-100%25-green?style=flat-square) ![Version](https://img.shields.io/badge/发行版本-2.0r5.1-blue?style=flat-square) ![Update](https://img.shields.io/badge/更新时间-1月19日-red?style=flat-square)
 
+---
+
 🤔什么是MengPluginX？
 
----
 
 [MengPluginX](https://github.com/HuanMeng-official/MengPluginX) 是由 [幻梦official](https://space.bilibili.com/626446902) 开发的一款服务器辅助管理插件，如果遇到各种问题可以提交 [Issue](https://github.com/HuanMeng-official/MengPluginX/issues)
 
