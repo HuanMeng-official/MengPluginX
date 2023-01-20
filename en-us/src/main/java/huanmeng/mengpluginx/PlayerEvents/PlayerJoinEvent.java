@@ -12,7 +12,7 @@ public class PlayerJoinEvent implements Listener {
     public void PlayerJoinEvent(org.bukkit.event.player.PlayerJoinEvent join){
         Player player = join.getPlayer();
         String name = join.getPlayer().getName();
-        player.sendMessage(ChatColor.YELLOW + plugin.getConfig().getString("Characters") + ChatColor.WHITE + "欢迎" + name + "加入" + plugin.getConfig().getString("Server"));
+        player.sendMessage(ChatColor.YELLOW + plugin.getConfig().getString("Characters") + ChatColor.WHITE  + name + ",welcome join the" + plugin.getConfig().getString("Server"));
         player.sendMessage(ChatColor.YELLOW + plugin.getConfig().getString("Characters") + ChatColor.WHITE + plugin.getConfig().getString("Tips"));
     }
 }

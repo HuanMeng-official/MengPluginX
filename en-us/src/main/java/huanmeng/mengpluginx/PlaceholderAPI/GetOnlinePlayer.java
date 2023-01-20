@@ -15,7 +15,7 @@ public class GetOnlinePlayer implements CommandExecutor {
             Player player = (Player) sender;
             String online = "%server_online%";
             online = PlaceholderAPI.setPlaceholders(player,online);
-            sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "当前服务器在线玩家数量：" + ChatColor.GREEN + online);
+            sender.sendMessage(ChatColor.YELLOW + "[HuanMeng]" + ChatColor.WHITE + "The number of online players on the server is: " + ChatColor.GREEN + online);
         }else {
             System.out.println(ChatColor.RED + "Error: Please let the player execute the command");
         }

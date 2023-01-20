@@ -1,6 +1,7 @@
 package huanmeng.mengpluginx.PlaceholderAPI;
 
 import me.clip.placeholderapi.PlaceholderAPI;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -8,14 +9,17 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-public class GetOnlinePlayer implements CommandExecutor {
+public class GetPlayerUUID implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        if (sender instanceof Player) {
+        if (sender instanceof Player){
             Player player = (Player) sender;
-            String online = "%server_online%";
-            online = PlaceholderAPI.setPlaceholders(player,online);
-            sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "当前服务器在线玩家数量：" + ChatColor.GREEN + online);
+            Player target = (Player) Bukkit.getPlayerExact(args[0]);
+            String uuid = "%player_uuid%";
+            uuid = PlaceholderAPI.setPlaceholders(target,uuid);
+            if (target != null){
+                sender.sendMessage(ChatColor.YELLOW + "[HuanMeng]" + ChatColor.WHITE + "The Player UUID is: " + ChatColor.GREEN + uuid);
+            }
         }else {
             System.out.println(ChatColor.RED + "Error: Please let the player execute the command");
         }

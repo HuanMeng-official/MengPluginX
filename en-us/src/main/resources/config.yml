@@ -1,0 +1,23 @@
+#Author: HuanMeng
+
+#Bad word shielding switch
+enable: true
+
+#Default Reminder Person
+Characters: '[HuanMeng]'
+#Server name
+#[HuanMeng]Player,welcome join the 'server'
+Server: '服务器'
+#Player join server tips
+Tips: '提示'
+#sleep tips
+Sleep: '这么晚才睡嘛？要好好睡觉哦ヾ(≧O≦)〃'
+#leave bed tips
+Getup: '这么早就起床嘛？不如再睡一觉吧✧(◍˃̶ᗜ˂̶◍)✩'
+#Player sends Bad-Worlds warning
+Alert: '请注意文明哦(ꐦ ಠ 皿 ಠ) '
+
+#Bad worlds keywords
+BadWorlds:
+  - 'sb'
+  - 'fuck'
