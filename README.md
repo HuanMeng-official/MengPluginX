@@ -2,7 +2,7 @@
 
 <h2>🌍支持语言/开源协议：</h2>
 
-![MIT License](./svg/mit.svg) ![简体中文](./svg/zh.svg) ![Language](./svg/java.svg)
+![MIT License](./svg/mit.svg) ![简体中文](./svg/zh.svg) ![Language](./svg/java.svg) ![English](https://img.shields.io/badge/English-100%-green?style=flat-square)
 ---
 
 ## 🤔什么是MengPluginX？
