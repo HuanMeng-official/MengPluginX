@@ -15,6 +15,7 @@ public final class MengPluginX extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         System.out.println("The plugin is Loading...");
+        saveResource("keywords.yml",false);
         getConfig().options().copyDefaults();
         saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new PlayerJoinEvent(),this);
