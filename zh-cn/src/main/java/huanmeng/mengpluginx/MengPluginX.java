@@ -24,6 +24,7 @@ public final class MengPluginX extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new BadWords(),this);
         Objects.requireNonNull(getCommand("mpx")).setExecutor(new MengPluginXCommands());
         Objects.requireNonNull(getCommand("gm")).setExecutor(new SetGameMode());
+        Objects.requireNonNull(getCommand("gm")).setTabCompleter(new SetGameMode());
         Objects.requireNonNull(getCommand("mpx_tps")).setExecutor(new GetServerTPS());
         Objects.requireNonNull(getCommand("mpx_ping")).setExecutor(new GetPlayerPing());
         Objects.requireNonNull(getCommand("online_player")).setExecutor(new GetOnlinePlayer());
