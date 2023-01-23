@@ -16,8 +16,3 @@ Sleep: '这么晚才睡嘛？要好好睡觉哦ヾ(≧O≦)〃'
 Getup: '这么早就起床嘛？不如再睡一觉吧✧(◍˃̶ᗜ˂̶◍)✩'
 #Player sends Bad-Worlds warning
 Alert: '请注意文明哦(ꐦ ಠ 皿 ಠ) '
-
-#Bad worlds keywords
-BadWorlds:
-  - 'sb'
-  - 'fuck'
