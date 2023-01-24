@@ -6,6 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
 
 public class MengPluginXCommands implements CommandExecutor {
     @Override
@@ -15,7 +16,7 @@ public class MengPluginXCommands implements CommandExecutor {
             sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "插件已启用了哦(ᗒᗩᗕ)՞");
             sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "如果Ping和TPS命令无法使用请输入papi ecloud download Player和papi ecloud download Server命令下载PAPI依赖并重启PAPI");
         } else if (sender instanceof ConsoleCommandSender) {
-            System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "插件已启用了哦(ᗒᗩᗕ)՞");
+            System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "插件已启用了哦");
             System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "如果Ping和TPS命令无法使用请输入papi ecloud download Player和papi ecloud download Server命令下载PAPI依赖并重启PAPI");
         }
         return false;
