@@ -1,4 +1,5 @@
-#Author: HuanMeng
+#Author: HuanMeng_
+#The Plugin url: https://github.com/HuanMeng-official/MengPluginX/
 
 #Bad word shielding switch
 enable: true
@@ -7,12 +8,12 @@ enable: true
 Characters: '[HuanMeng]'
 #Server name
 #[HuanMeng]Player,welcome join the 'server'
-Server: '服务器'
+Server: 'Server'
 #Player join server tips
-Tips: '提示'
+Tips: 'tips'
 #sleep tips
-Sleep: '这么晚才睡嘛？要好好睡觉哦ヾ(≧O≦)〃'
+Sleep: 'Good evening'
 #leave bed tips
-Getup: '这么早就起床嘛？不如再睡一觉吧✧(◍˃̶ᗜ˂̶◍)✩'
+Getup: 'Good morning'
 #Player sends Bad-Worlds warning
-Alert: '请注意文明哦(ꐦ ಠ 皿 ಠ) '
+Alert: 'Please pay attention to civilization'
