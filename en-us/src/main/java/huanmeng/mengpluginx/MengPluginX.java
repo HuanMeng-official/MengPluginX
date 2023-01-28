@@ -5,6 +5,7 @@ import huanmeng.mengpluginx.PlayerEvents.*;
 import huanmeng.mengpluginx.PlaceholderAPI.*;
 import huanmeng.mengpluginx.Words.*;
 import huanmeng.mengpluginx.Worlds.*;
+import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
@@ -14,7 +15,13 @@ public final class MengPluginX extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        System.out.println("The plugin is Loading...");
+        System.out.println(ChatColor.GREEN + "===================");
+        System.out.println(ChatColor.LIGHT_PURPLE + "The plugin is loading...");
+        System.out.println(ChatColor.AQUA + "Loading config.yml");
+        System.out.println(ChatColor.AQUA + "Loading keywords.yml");
+        System.out.println(ChatColor.YELLOW + "version: 2.0-r8");
+        System.out.println(ChatColor.YELLOW + "author: HuanMeng_");
+        System.out.println(ChatColor.GREEN + "===================");
         saveResource("keywords.yml",false);
         getConfig().options().copyDefaults();
         saveDefaultConfig();
