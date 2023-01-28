@@ -1,5 +1,4 @@
-#Author: HuanMeng_
-#The Plugin url: https://github.com/HuanMeng-official/MengPluginX/
+#Author: HuanMeng
 
 #Bad word shielding switch
 enable: true
@@ -10,7 +9,7 @@ Characters: '[HuanMeng]'
 #[HuanMeng]Player,welcome join the 'server'
 Server: 'Server'
 #Player join server tips
-Tips: 'tips'
+Tips: 'Tips'
 #sleep tips
 Sleep: 'Good evening'
 #leave bed tips
