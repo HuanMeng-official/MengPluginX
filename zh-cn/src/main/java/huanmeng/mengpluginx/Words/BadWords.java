@@ -23,7 +23,7 @@ public class BadWords implements Listener {
         String massage = event.getMessage();
         for (int i = 0; i < config.getStringList("key-words").size(); i++) {
             if (massage.contains(config.getStringList("key-words").get(i))) {
-                event.setCancelled(plugin.getConfig().getBoolean("enable"));
+                event.setCancelled(plugin.getConfig().getBoolean("BadWords"));
                 player.sendMessage(ChatColor.YELLOW + plugin.getConfig().getString("Characters") + ChatColor.RED + plugin.getConfig().getString("Alert"));
             }
         }
