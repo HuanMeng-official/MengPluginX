@@ -1,7 +1,7 @@
 #Author: HuanMeng
 
 #Bad word shielding switch
-enable: true
+BadWords: true
 
 #Default Reminder Person
 Characters: '[HuanMeng]'
