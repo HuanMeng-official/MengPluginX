@@ -4,7 +4,7 @@
 #插件配置：false（关闭）  true（开启）
 
 #脏话屏蔽开关
-enable: true
+BadWords: true
 
 #该项为欢迎人物
 Characters: '[幻梦娘]'
