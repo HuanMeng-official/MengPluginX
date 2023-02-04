@@ -13,15 +13,20 @@ import java.util.Objects;
 public final class MengPluginX extends JavaPlugin {
 
     @Override
+    public void onLoad() {
+        System.out.println(ChatColor.GREEN + "===================");
+        System.out.println("The plugin is loading...");
+        System.out.println("Loading config.yml");
+        System.out.println("Loading keywords.yml");
+        System.out.println("version: 2.0-r8");
+        System.out.println("author: HuanMeng_");
+        System.out.println(ChatColor.GREEN + "===================");
+    }
+
+    @Override
     public void onEnable() {
         // Plugin startup logic
-        System.out.println(ChatColor.GREEN + "===================");
-        System.out.println(ChatColor.LIGHT_PURPLE + "The plugin is loading...");
-        System.out.println(ChatColor.AQUA + "Loading config.yml");
-        System.out.println(ChatColor.AQUA + "Loading keywords.yml");
-        System.out.println(ChatColor.YELLOW + "version: 2.0-r8");
-        System.out.println(ChatColor.YELLOW + "author: HuanMeng_");
-        System.out.println(ChatColor.GREEN + "===================");
+        System.out.println("The Plugin is loaded successfully");
         saveResource("keywords.yml",false);
         getConfig().options().copyDefaults();
         saveDefaultConfig();
