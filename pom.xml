@@ -6,7 +6,7 @@
 
     <groupId>HuanMeng_</groupId>
     <artifactId>MengPluginX</artifactId>
-    <version>2.0-r8.1</version>
+    <version>3.0-r1</version>
     <packaging>jar</packaging>
 
     <name>MengPluginX</name>
