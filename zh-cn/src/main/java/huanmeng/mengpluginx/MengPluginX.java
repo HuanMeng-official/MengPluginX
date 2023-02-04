@@ -13,15 +13,21 @@ import java.util.Objects;
 public final class MengPluginX extends JavaPlugin {
 
     @Override
+    public void onLoad() {
+        // Plugin loading logic
+        System.out.println(ChatColor.GREEN + "===================");
+        System.out.println("插件正在加载");
+        System.out.println("正在加载config.yml");
+        System.out.println("正在加载keywords.yml");
+        System.out.println("插件版本：3.0-r1");
+        System.out.println("插件作者：幻梦official");
+        System.out.println(ChatColor.GREEN + "===================");
+    }
+
+    @Override
     public void onEnable() {
         // Plugin startup logic
-        System.out.println(ChatColor.GREEN + "===================");
-        System.out.println(ChatColor.LIGHT_PURPLE + "插件正在加载");
-        System.out.println(ChatColor.AQUA + "正在加载config.yml");
-        System.out.println(ChatColor.AQUA + "正在加载keywords.yml");
-        System.out.println(ChatColor.YELLOW + "插件版本：2.0-r8");
-        System.out.println(ChatColor.YELLOW + "插件作者：幻梦official");
-        System.out.println(ChatColor.GREEN + "===================");
+        System.out.println("插件成功加载");
         saveResource("keywords.yml",false);
         getConfig().options().copyDefaults();
         saveDefaultConfig();
