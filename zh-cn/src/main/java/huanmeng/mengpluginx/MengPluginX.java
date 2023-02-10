@@ -29,7 +29,7 @@ public final class MengPluginX extends JavaPlugin {
         // Plugin startup logic
         System.out.println("插件成功加载");
         saveResource("keywords.yml",false);
-        getConfig().options().copyDefaults();
+        getConfig().options().copyDefaults(true);
         saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new PlayerJoinEvent(),this);
         getServer().getPluginManager().registerEvents(new PlayerBedEnterEvent(),this);
