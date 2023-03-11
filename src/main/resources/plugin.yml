@@ -1,0 +1,29 @@
+name: MengPluginX
+version: '${project.version}'
+main: huanmeng.mengpluginx.MengPluginX
+api-version: 1.16
+softdepend:
+  - PlaceholderAPI
+commands:
+  mpx_ip:
+    description: Get Player IP
+  mpx_uuid:
+    description: Get Player UUID
+  mpx_time:
+    description: Get the world full_time
+  mpx_seed:
+    description: Get the world seed
+  online_player:
+    description: Viewer server online players
+  mpx_ping:
+    description: Viewer the player ping
+  mpx_tps:
+    description: Viewer the server TPS
+  mpx:
+    description: Check if the plugin is started
+  gm:
+    description: Set Player Game Mode
+permissions:
+  mpx.huanmeng.op:
+    description: Permission
+    default: op

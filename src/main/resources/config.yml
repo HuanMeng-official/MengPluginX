@@ -1,0 +1,27 @@
+#插件作者：幻梦official
+#该插件禁止任何倒卖！
+#开源地址: https://github.com/HuanMeng-official/MengPluginX
+#插件配置：false（关闭）  true（开启）
+
+#脏话屏蔽开关
+BadWords: false
+#白名单开关
+WhiteList: false
+
+#该项为无白名单玩家进服提示信息
+kick-message: '! You did not get the whitelist'
+
+#该项为欢迎人物
+Characters: '[幻梦娘]'
+#该项为欢迎语句的服务器提示名称
+#[幻梦娘]欢迎xxx加入'服务器'  您所填的是''中的服务器名称
+Server: '服务器'
+#该项为附加提示语句
+#[幻梦娘] xxxxxxxx
+Tips: '提示'
+#该项为睡觉时的提示语句
+Sleep: '这么晚才睡嘛？要好好睡觉哦ヾ(≧O≦)〃'
+#该项为离开床时的提示语句
+Getup: '这么早就起床嘛？不如再睡一觉吧✧(◍˃̶ᗜ˂̶◍)✩'
+#该句为玩家说脏话时的警告语句
+Alert: '请注意文明哦(ꐦ ಠ 皿 ಠ) '
