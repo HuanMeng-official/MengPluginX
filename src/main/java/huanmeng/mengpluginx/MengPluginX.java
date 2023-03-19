@@ -14,19 +14,17 @@ public final class MengPluginX extends JavaPlugin {
 
     @Override
     public void onLoad() {
-        // Plugin loading logic
         System.out.println(ChatColor.GREEN + "===================");
         System.out.println("插件正在加载");
         System.out.println("正在加载config.yml");
         System.out.println("正在加载keywords.yml");
-        System.out.println("插件版本：3.1-r1");
+        System.out.println("插件版本：3.1-r2");
         System.out.println("插件作者：幻梦official");
         System.out.println(ChatColor.GREEN + "===================");
     }
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
         System.out.println("插件成功加载");
         saveResource("keywords.yml",false);
         getConfig().options().copyDefaults(true);
@@ -36,6 +34,7 @@ public final class MengPluginX extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerBedLeaveEvent(),this);
         getServer().getPluginManager().registerEvents(new BadWords(),this);
         Objects.requireNonNull(getCommand("mpx")).setExecutor(new MengPluginXCommands());
+        Objects.requireNonNull(getCommand("mpx_help")).setExecutor(new CommandHelp());
         Objects.requireNonNull(getCommand("gm")).setExecutor(new SetGameMode());
         Objects.requireNonNull(getCommand("gm")).setTabCompleter(new SetGameMode());
         Objects.requireNonNull(getCommand("mpx_tps")).setExecutor(new GetServerTPS());
@@ -49,7 +48,6 @@ public final class MengPluginX extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
         System.out.println("插件正在关闭");
     }
 }
