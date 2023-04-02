@@ -24,6 +24,8 @@ public class CommandHelp implements CommandExecutor {
             sender.sendMessage(ChatColor.GREEN + "------世界命令------");
             sender.sendMessage(ChatColor.YELLOW + "/mpx_seed 获取自己所在世界的种子");
             sender.sendMessage(ChatColor.YELLOW + "/mpx_time 获取自己所在世界的绝对时间");
+            sender.sendMessage(ChatColor.GREEN + "------服务器------");
+            sender.sendMessage(ChatColor.YELLOW + "/mpx_ram 获取服务器当前已用/剩余内存");
         }else {
             System.out.println(ChatColor.RED + "Error: Please let the player execute the command");
         }
