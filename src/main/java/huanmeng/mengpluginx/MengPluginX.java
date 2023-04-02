@@ -18,7 +18,7 @@ public final class MengPluginX extends JavaPlugin {
         System.out.println("插件正在加载");
         System.out.println("正在加载config.yml");
         System.out.println("正在加载keywords.yml");
-        System.out.println("插件版本：3.1-r2");
+        System.out.println("插件版本：4.0-r1");
         System.out.println("插件作者：幻梦official");
         System.out.println(ChatColor.GREEN + "===================");
     }
@@ -44,6 +44,7 @@ public final class MengPluginX extends JavaPlugin {
         Objects.requireNonNull(getCommand("mpx_time")).setExecutor(new GetFullTime());
         Objects.requireNonNull(getCommand("mpx_uuid")).setExecutor(new GetPlayerUUID());
         Objects.requireNonNull(getCommand("mpx_ip")).setExecutor(new GetPlayerIP());
+        Objects.requireNonNull(getCommand("mpx_ram")).setExecutor(new GetServerRam());
     }
 
     @Override
