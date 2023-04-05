@@ -32,8 +32,9 @@ public class GetServerRam implements CommandExecutor , TabExecutor {
                     player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "当前服务器总共内存：" + ChatColor.GREEN + total_ram + ChatColor.WHITE + "MB");
                     break;
             }
-        }else {
-            System.out.println(ChatColor.RED + "Error: Please let the player execute the command");
+        } else if (sender instanceof ConsoleCommandSender) {
+            ConsoleCommandSender consoleCommandSender = (ConsoleCommandSender) sender;
+            sender.sendMessage(ChatColor.RED + "Error: Please let the player execute the command");
         }
         return false;
     }
