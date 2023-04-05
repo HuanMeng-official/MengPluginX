@@ -1,0 +1,38 @@
+name: MengPluginX
+version: '${project.version}'
+main: top.huanmeng.MengPluginX
+api-version: 1.16
+author: HuanMeng_
+description: MengPluginX - A lightweight server management plugin
+website: https://github.com/HuanMeng-official/MengPluginX/
+softdepend:
+  - PlaceholderAPI
+commands:
+  mpx_sa:
+    description: Send Announcement
+  mpx_ram:
+    description: Viewer server ram
+  mpx_ip:
+    description: Get Player IP
+  mpx_uuid:
+    description: Get Player UUID
+  mpx_time:
+    description: Get the world full_time
+  mpx_seed:
+    description: Get the world seed
+  online_player:
+    description: Viewer server online players
+  mpx_ping:
+    description: Viewer the player ping
+  mpx_tps:
+    description: Viewer the server TPS
+  mpx:
+    description: Check if the plugin is started
+  mpx_help:
+    description: Viewer the plugin's commands
+  gm:
+    description: Set Player Game Mode
+permissions:
+  mpx.huanmeng.op:
+    description: Permission
+    default: op
