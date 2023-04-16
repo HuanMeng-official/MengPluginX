@@ -70,6 +70,6 @@ MengPluginX的功能/优势：
 
 ## 📋数据统计
 
-![User](https://img.shields.io/badge/User-6人-blue?style=flat-square) ![Issue](https://img.shields.io/badge/Issue-0次-blue?style=flat-square) ![Release](https://img.shields.io/badge/Release-24个-blue?style=flat-square)
+![User](https://bstats.org/signatures/bukkit/MengPluginX.svg)
 
 [^作者]: 由[幻梦official](https://space.bilibili.com/626446902)开发，但是因为代码稀烂以及各种原因最终停更
