@@ -1,5 +1,6 @@
 package top.huanmeng;
 
+import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 import top.huanmeng.Commands.*;
 import top.huanmeng.PlaceholderAPI.*;
@@ -14,12 +15,19 @@ public final class MengPluginX extends JavaPlugin {
 
     @Override
     public void onLoad() {
-        System.out.println("插件正在加载");
+        System.out.println(ChatColor.GOLD + "__  __ ______  __");
+        System.out.println(ChatColor.GOLD + "|  \\/  |  _ \\ \\/ /");
+        System.out.println(ChatColor.GOLD + "| |\\/| | |_)  \\  /");
+        System.out.println(ChatColor.GOLD + "| |  | |  __/ /  \\");
+        System.out.println(ChatColor.GOLD + "|_|  |_|_|  /_/\\_\\");
     }
 
     @Override
     public void onEnable() {
         System.out.println("插件成功加载");
+        int pluginId = 18219;
+        Metrics metrics = new Metrics(this, pluginId);
+        metrics.addCustomChart(new Metrics.SimplePie("chart_id", () -> "My value"));
         getServer().getScheduler().scheduleSyncDelayedTask(this,new TickPerSecond(),100L);
         saveResource("keywords.yml",false);
         getConfig().options().copyDefaults(true);
@@ -28,8 +36,7 @@ public final class MengPluginX extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerBedEnterEvent(),this);
         getServer().getPluginManager().registerEvents(new PlayerBedLeaveEvent(),this);
         getServer().getPluginManager().registerEvents(new BadWords(),this);
-        Objects.requireNonNull(getCommand("mpx")).setExecutor(new MengPluginXCommands());
-        Objects.requireNonNull(getCommand("mpx_help")).setExecutor(new CommandHelp());
+        Objects.requireNonNull(getCommand("mpx")).setExecutor(new MengPluginXInfo());
         Objects.requireNonNull(getCommand("gm")).setExecutor(new SetGameMode());
         Objects.requireNonNull(getCommand("mpx_tps")).setExecutor(new GetTickPerSecond());
         Objects.requireNonNull(getCommand("mpx_ping")).setExecutor(new GetPlayerPing());
