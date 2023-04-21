@@ -27,9 +27,7 @@ commands:
   mpx_tps:
     description: Viewer the server TPS
   mpx:
-    description: Check if the plugin is started
-  mpx_help:
-    description: Viewer the plugin's commands
+    description: Viewer the plugin basic information
   gm:
     description: Set Player Game Mode
 permissions:

@@ -5,6 +5,8 @@
 
 #脏话屏蔽开关
 BadWords: false
+#保留物品栏开关
+KeepInventory: false
 
 #该项为欢迎人物
 Characters: '[幻梦娘]'

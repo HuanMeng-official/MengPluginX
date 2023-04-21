@@ -4,7 +4,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 import top.huanmeng.Commands.*;
 import top.huanmeng.PlaceholderAPI.*;
-import top.huanmeng.PlayerEvents.*;
+import top.huanmeng.Events.*;
 import top.huanmeng.Tools.*;
 import top.huanmeng.Words.*;
 import top.huanmeng.Worlds.*;
@@ -25,6 +25,12 @@ public final class MengPluginX extends JavaPlugin {
     @Override
     public void onEnable() {
         System.out.println("插件成功加载");
+        boolean keepInventory = getConfig().getBoolean("KeepInventory", true);
+        if (keepInventory){
+            System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“KeepInventory”已开启");
+        }else {
+            System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“KeepInventory”未开启");
+        }
         int pluginId = 18219;
         Metrics metrics = new Metrics(this, pluginId);
         metrics.addCustomChart(new Metrics.SimplePie("chart_id", () -> "My value"));
@@ -36,6 +42,7 @@ public final class MengPluginX extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerBedEnterEvent(),this);
         getServer().getPluginManager().registerEvents(new PlayerBedLeaveEvent(),this);
         getServer().getPluginManager().registerEvents(new BadWords(),this);
+        getServer().getPluginManager().registerEvents(new KeepInventory(),this);
         Objects.requireNonNull(getCommand("mpx")).setExecutor(new MengPluginXInfo());
         Objects.requireNonNull(getCommand("gm")).setExecutor(new SetGameMode());
         Objects.requireNonNull(getCommand("mpx_tps")).setExecutor(new GetTickPerSecond());
