@@ -1,4 +1,4 @@
-package top.huanmeng.Worlds;
+package top.huanmeng.Worlds.Commands;
 
 import top.huanmeng.Tools.TickPerSecond;
 import org.bukkit.ChatColor;

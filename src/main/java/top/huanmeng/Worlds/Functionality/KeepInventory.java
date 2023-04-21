@@ -1,4 +1,4 @@
-package top.huanmeng.Worlds;
+package top.huanmeng.Worlds.Functionality;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

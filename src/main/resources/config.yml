@@ -7,6 +7,8 @@
 BadWords: false
 #保留物品栏开关
 KeepInventory: false
+#阻止苦力怕爆炸破坏地形开关
+AntiCreeper: false
 
 #该项为欢迎人物
 Characters: '[幻梦娘]'
