@@ -9,6 +9,8 @@ BadWords: false
 KeepInventory: false
 #阻止苦力怕爆炸破坏地形开关
 AntiCreeper: false
+#阻止末影人破坏方块
+AntiEnderMan: false
 
 #该项为欢迎人物
 Characters: '[幻梦娘]'

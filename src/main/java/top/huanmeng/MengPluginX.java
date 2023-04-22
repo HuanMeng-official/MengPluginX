@@ -29,6 +29,7 @@ public final class MengPluginX extends JavaPlugin {
         System.out.println("插件成功加载");
         boolean keepInventory = getConfig().getBoolean("KeepInventory", true);
         boolean antiCreeper = getConfig().getBoolean("AntiCreeper",true);
+        boolean antiEnderMan = getConfig().getBoolean("AntiEnderMan",true);
         if (keepInventory){
             System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“KeepInventory”已开启");
         }else {
@@ -38,6 +39,11 @@ public final class MengPluginX extends JavaPlugin {
             System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“AntiCreeperBoom”已开启");
         }else {
             System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“AntiCreeperBoom”未开启");
+        }
+        if (antiEnderMan){
+            System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“AntiEnderManPickupBlock”已开启");
+        }else {
+            System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“AntiEnderManPickupBloc”未开启");
         }
         int pluginId = 18219;
         Metrics metrics = new Metrics(this, pluginId);
@@ -52,6 +58,8 @@ public final class MengPluginX extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new BadWords(),this);
         getServer().getPluginManager().registerEvents(new KeepInventory(),this);
         getServer().getPluginManager().registerEvents(new AntiCreeper(),this);
+        getServer().getPluginManager().registerEvents(new AntiCreeperBoom(),this);
+        getServer().getPluginManager().registerEvents(new AntiEnderMan(),this);
         Objects.requireNonNull(getCommand("mpx")).setExecutor(new MengPluginXInfo());
         Objects.requireNonNull(getCommand("gm")).setExecutor(new SetGameMode());
         Objects.requireNonNull(getCommand("mpx_tps")).setExecutor(new GetTickPerSecond());
