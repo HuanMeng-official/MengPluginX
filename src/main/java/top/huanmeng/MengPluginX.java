@@ -42,7 +42,7 @@ public final class MengPluginX extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new KeepInventory(),this);
         getServer().getPluginManager().registerEvents(new AntiCreeper(),this);
         getServer().getPluginManager().registerEvents(new AntiEnderMan(),this);
-        Objects.requireNonNull(getCommand("mpx")).setExecutor(new MengPluginXInfo());
+        Objects.requireNonNull(getCommand("mpx")).setExecutor(new CommandHelp());
         Objects.requireNonNull(getCommand("gm")).setExecutor(new SetGameMode());
         Objects.requireNonNull(getCommand("mpx_tps")).setExecutor(new GetTickPerSecond());
         Objects.requireNonNull(getCommand("mpx_ping")).setExecutor(new GetPlayerPing());
@@ -53,6 +53,7 @@ public final class MengPluginX extends JavaPlugin {
         Objects.requireNonNull(getCommand("mpx_ip")).setExecutor(new GetPlayerIP());
         Objects.requireNonNull(getCommand("mpx_sa")).setExecutor(new SendAnnouncement());
         Objects.requireNonNull(getCommand("mpx_ram")).setExecutor(new GetServerRam());
+        Objects.requireNonNull(getCommand("search")).setExecutor(new InventorySearch());
         boolean keepInventory = getConfig().getBoolean("KeepInventory", true);
         boolean antiCreeper = getConfig().getBoolean("AntiCreeper",true);
         boolean antiEnderMan = getConfig().getBoolean("AntiEnderMan",true);

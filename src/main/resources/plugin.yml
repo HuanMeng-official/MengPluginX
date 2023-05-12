@@ -8,6 +8,8 @@ website: https://github.com/HuanMeng-official/MengPluginX/
 softdepend:
   - PlaceholderAPI
 commands:
+  search:
+    description: Search Player Item
   mpx_sa:
     description: Send Announcement
   mpx_ram:

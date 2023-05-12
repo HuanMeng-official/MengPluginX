@@ -8,7 +8,6 @@ import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-import java.io.Console;
 
 public class CommandHelp implements CommandExecutor {
     @Override
@@ -17,8 +16,8 @@ public class CommandHelp implements CommandExecutor {
             Player player = (Player) sender;
             sender.sendMessage(ChatColor.GREEN + "------基础命令------");
             sender.sendMessage(ChatColor.YELLOW + "/mpx 插件信息");
-            sender.sendMessage(ChatColor.YELLOW + "/mpx_help 插件帮助");
             sender.sendMessage(ChatColor.GREEN + "------功能命令------");
+            sender.sendMessage(ChatColor.YELLOW + "/search 搜索玩家背包物品");
             sender.sendMessage(ChatColor.YELLOW + "/mpx_ip 查看玩家IP（仅管理员）");
             sender.sendMessage(ChatColor.YELLOW + "/mpx_ping 查看自己与服务器的延迟");
             sender.sendMessage(ChatColor.YELLOW + "/mpx_tps 查看服务器当前TPS");
@@ -34,8 +33,8 @@ public class CommandHelp implements CommandExecutor {
             ConsoleCommandSender consoleCommandSender = (ConsoleCommandSender) sender;
             sender.sendMessage(ChatColor.GREEN + "------基础命令------");
             sender.sendMessage(ChatColor.YELLOW + "/mpx 插件信息");
-            sender.sendMessage(ChatColor.YELLOW + "/mpx_help 插件帮助");
             sender.sendMessage(ChatColor.GREEN + "------功能命令------");
+            sender.sendMessage(ChatColor.YELLOW + "/search 搜索玩家背包物品");
             sender.sendMessage(ChatColor.YELLOW + "/mpx_ip 查看玩家IP（仅管理员）");
             sender.sendMessage(ChatColor.YELLOW + "/mpx_ping 查看自己与服务器的延迟");
             sender.sendMessage(ChatColor.YELLOW + "/mpx_tps 查看服务器当前TPS");
