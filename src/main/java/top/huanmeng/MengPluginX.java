@@ -17,17 +17,17 @@ public final class MengPluginX extends JavaPlugin {
 
     @Override
     public void onLoad() {
-        System.out.println(ChatColor.DARK_RED + "MengPluginX is loading");
+        getLogger().info(ChatColor.DARK_RED + "MengPluginX is loading");
     }
 
     @Override
     public void onEnable() {
-        System.out.println(ChatColor.DARK_GREEN + "=========================");
-        System.out.println(ChatColor.GOLD + "__  __ ______  __");
-        System.out.println(ChatColor.GOLD + "|  \\/  |  _ \\ \\/ /");
-        System.out.println(ChatColor.GOLD + "| |\\/| | |_)  \\  /");
-        System.out.println(ChatColor.GOLD + "| |  | |  __/ /  \\");
-        System.out.println(ChatColor.GOLD + "|_|  |_|_|  /_/\\_\\");
+        getLogger().info(ChatColor.DARK_GREEN + "=========================");
+        getLogger().info(ChatColor.GOLD + "__  __ ______  __");
+        getLogger().info(ChatColor.GOLD + "|  \\/  |  _ \\ \\/ /");
+        getLogger().info(ChatColor.GOLD + "| |\\/| | |_)  \\  /");
+        getLogger().info(ChatColor.GOLD + "| |  | |  __/ /  \\");
+        getLogger().info(ChatColor.GOLD + "|_|  |_|_|  /_/\\_\\");
         int pluginId = 18219;
         Metrics metrics = new Metrics(this, pluginId);
         metrics.addCustomChart(new Metrics.SimplePie("chart_id", () -> "My value"));
@@ -54,29 +54,35 @@ public final class MengPluginX extends JavaPlugin {
         Objects.requireNonNull(getCommand("mpx_sa")).setExecutor(new SendAnnouncement());
         Objects.requireNonNull(getCommand("mpx_ram")).setExecutor(new GetServerRam());
         Objects.requireNonNull(getCommand("search")).setExecutor(new InventorySearch());
+        boolean badwords = getConfig().getBoolean("BadWords",true);
         boolean keepInventory = getConfig().getBoolean("KeepInventory", true);
         boolean antiCreeper = getConfig().getBoolean("AntiCreeper",true);
         boolean antiEnderMan = getConfig().getBoolean("AntiEnderMan",true);
-        if (keepInventory){
-            System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“KeepInventory”已开启");
+        if (badwords){
+            getLogger().info(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“BadWords”已开启");
         }else {
-            System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“KeepInventory”未开启");
+            getLogger().info(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“BadWords”已开启");
+        }
+        if (keepInventory){
+            getLogger().info(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“KeepInventory”已开启");
+        }else {
+            getLogger().info(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“KeepInventory”未开启");
         }
         if (antiCreeper){
-            System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“AntiCreeperBoom”已开启");
+            getLogger().info(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“AntiCreeperBoom”已开启");
         }else {
-            System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“AntiCreeperBoom”未开启");
+            getLogger().info(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“AntiCreeperBoom”未开启");
         }
         if (antiEnderMan){
-            System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“AntiEnderManPickupBlock”已开启");
+            getLogger().info(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“AntiEnderManPickupBlock”已开启");
         }else {
-            System.out.println(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“AntiEnderManPickupBloc”未开启");
+            getLogger().info(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“AntiEnderManPickupBloc”未开启");
         }
-        System.out.println(ChatColor.DARK_GREEN + "=========================");
+        getLogger().info(ChatColor.DARK_GREEN + "=========================");
     }
 
     @Override
     public void onDisable() {
-        System.out.println(ChatColor.DARK_RED + "MengPluginX is disabled");
+        getLogger().info(ChatColor.DARK_RED + "MengPluginX is disabled");
     }
 }
