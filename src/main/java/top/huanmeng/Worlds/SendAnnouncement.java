@@ -14,7 +14,7 @@ public class SendAnnouncement implements CommandExecutor {
         if (sender.hasPermission("mpx.huanmeng.op")){
             Bukkit.getServer().broadcastMessage(ChatColor.RED + "[公告]" + ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + args[0]);
         } else if (sender instanceof ConsoleCommandSender) {
-            Bukkit.getServer().broadcastMessage(ChatColor.RED + "[公告]" + ChatColor.WHITE + "[幻梦娘]" + ChatColor.RESET + args[0]);
+            Bukkit.getServer().broadcastMessage(ChatColor.RED + "[公告]" + ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + args[0]);
         }
         return false;
     }

@@ -16,11 +16,13 @@ public class PlayerJoinEvent implements Listener {
     public void PlayerJoinEvent(org.bukkit.event.player.PlayerJoinEvent join){
         Player player = join.getPlayer();
         String name = join.getPlayer().getName();
-        join.setJoinMessage(ChatColor.YELLOW + plugin.getConfig().getString("Characters") + ChatColor.WHITE + "欢迎" + name + "加入" + plugin.getConfig().getString("Server"));
-        player.sendMessage(ChatColor.YELLOW + plugin.getConfig().getString("Characters") + ChatColor.WHITE + plugin.getConfig().getString("Tips"));
+        join.setJoinMessage(ChatColor.YELLOW + plugin.getConfig().getString("Characters") + ChatColor.RESET + "欢迎" + name + "加入" + plugin.getConfig().getString("Server"));
+        player.sendMessage(ChatColor.YELLOW + plugin.getConfig().getString("Characters") + ChatColor.RESET + plugin.getConfig().getString("Tips"));
         // 播放加入服务器音效
         Location location = player.getLocation();
         World world = location.getWorld();
-        world.playSound(location , Sound.ENTITY_PLAYER_LEVELUP,.5F,.5F);
+        if (world != null) {
+            world.playSound(location , Sound.ENTITY_PLAYER_LEVELUP,.5F,.5F);
+        }
     }
 }

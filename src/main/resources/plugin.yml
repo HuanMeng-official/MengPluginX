@@ -1,7 +1,7 @@
 name: MengPluginX
 version: '${project.version}'
 main: top.huanmeng.MengPluginX
-api-version: 1.16
+api-version: 1.13
 author: HuanMeng_
 description: MengPluginX - A lightweight server management plugin
 website: https://github.com/HuanMeng-official/MengPluginX/

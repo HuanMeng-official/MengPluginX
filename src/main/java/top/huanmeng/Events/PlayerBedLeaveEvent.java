@@ -12,6 +12,6 @@ public class PlayerBedLeaveEvent implements Listener {
     @EventHandler
     public void PlayerBedLeaveEvent(org.bukkit.event.player.PlayerBedLeaveEvent BedLeave){
         Player getup = BedLeave.getPlayer();
-        getup.sendMessage(ChatColor.YELLOW + plugin.getConfig().getString("Characters") + ChatColor.WHITE + plugin.getConfig().getString("Getup"));
+        getup.sendMessage(ChatColor.YELLOW + plugin.getConfig().getString("Characters") + ChatColor.RESET + plugin.getConfig().getString("Getup"));
     }
 }

@@ -23,13 +23,13 @@ public class GetServerRam implements CommandExecutor , TabExecutor {
             String ram = args[0];
             switch (ram) {
                 case "used":
-                    player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "当前服务器已用内存：" + ChatColor.GREEN + used_ram + ChatColor.WHITE + "MB");
+                    player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "当前服务器已用内存：" + ChatColor.GREEN + used_ram + ChatColor.RESET + "MB");
                     break;
                 case "free":
-                    player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "当前服务器剩余内存：" + ChatColor.GREEN + free_ram + ChatColor.WHITE + "MB");
+                    player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "当前服务器剩余内存：" + ChatColor.GREEN + free_ram + ChatColor.RESET + "MB");
                     break;
                 case "total":
-                    player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "当前服务器总共内存：" + ChatColor.GREEN + total_ram + ChatColor.WHITE + "MB");
+                    player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "当前服务器总共内存：" + ChatColor.GREEN + total_ram + ChatColor.RESET + "MB");
                     break;
             }
         } else if (sender instanceof ConsoleCommandSender) {

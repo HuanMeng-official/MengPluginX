@@ -8,8 +8,6 @@ import top.huanmeng.Events.*;
 import top.huanmeng.Tools.*;
 import top.huanmeng.Words.*;
 import top.huanmeng.Worlds.*;
-import top.huanmeng.Worlds.Commands.*;
-import top.huanmeng.Worlds.Functionality.*;
 
 import java.util.Objects;
 

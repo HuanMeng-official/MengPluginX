@@ -13,7 +13,7 @@ public class PlayerBedEnterEvent implements Listener {
     public void PlayerBedEvent(org.bukkit.event.player.PlayerBedEnterEvent BedEvent){
         Player sleep = BedEvent.getPlayer();
         if(BedEvent.getBedEnterResult() == org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult.OK) {
-            sleep.sendMessage(ChatColor.YELLOW + plugin.getConfig().getString("Characters") + ChatColor.WHITE + plugin.getConfig().getString("Sleep"));
+            sleep.sendMessage(ChatColor.YELLOW + plugin.getConfig().getString("Characters") + ChatColor.RESET + plugin.getConfig().getString("Sleep"));
         }
     }
 }

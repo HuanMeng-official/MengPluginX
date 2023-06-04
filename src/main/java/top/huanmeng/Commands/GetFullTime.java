@@ -1,21 +1,21 @@
-package top.huanmeng.PlaceholderAPI;
+package top.huanmeng.Commands;
 
-import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.ChatColor;
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-public class GetOnlinePlayer implements CommandExecutor {
+public class GetFullTime implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        if (sender instanceof Player) {
+        if (sender.hasPermission("mpx.huanmeng.op")){
             Player player = (Player) sender;
-            String online = "%server_online%";
-            online = PlaceholderAPI.setPlaceholders(player,online);
-            sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "当前服务器在线玩家数量：" + ChatColor.GREEN + online);
+            World world = player.getWorld();
+            long full_time = world.getFullTime();
+            sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "当前世界的绝对时间：" + ChatColor.GREEN + full_time);
         }else {
             System.out.println(ChatColor.RED + "Error: Please let the player execute the command");
         }

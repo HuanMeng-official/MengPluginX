@@ -1,4 +1,4 @@
-package top.huanmeng.Worlds.Commands;
+package top.huanmeng.Commands;
 
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;

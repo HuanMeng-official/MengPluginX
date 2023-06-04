@@ -18,7 +18,7 @@ public class GetPlayerUUID implements CommandExecutor {
             String uuid = "%player_uuid%";
             uuid = PlaceholderAPI.setPlaceholders(target,uuid);
             if (target != null){
-                sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "该玩家的UUID为：" + ChatColor.GREEN + uuid);
+                sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "该玩家的UUID为：" + ChatColor.GREEN + uuid);
             }
         }else {
             System.out.println(ChatColor.RED + "Error: Please let the player execute the command");

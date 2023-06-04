@@ -1,4 +1,4 @@
-package top.huanmeng.Worlds.Commands;
+package top.huanmeng.Commands;
 
 import top.huanmeng.Tools.TickPerSecond;
 import org.bukkit.ChatColor;
@@ -15,11 +15,11 @@ public class GetTickPerSecond implements CommandExecutor {
         if (sender instanceof Player){
             Player player = (Player) sender;
             String tps = String.valueOf(TickPerSecond.getTPS());
-            sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "当前服务器TPS为：" + ChatColor.GREEN + tps);
+            sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "当前服务器TPS为：" + ChatColor.GREEN + tps);
         } else if (sender instanceof ConsoleCommandSender) {
             ConsoleCommandSender consoleCommandSender = (ConsoleCommandSender) sender;
             String tps = String.valueOf(TickPerSecond.getTPS());
-            sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.WHITE + "当前服务器TPS为：" + ChatColor.GREEN + tps);
+            sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "当前服务器TPS为：" + ChatColor.GREEN + tps);
         }
         return false;
     }
