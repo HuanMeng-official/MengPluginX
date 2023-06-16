@@ -12,10 +12,11 @@ public class KeepInventory implements Listener {
     public void PlayerDeathEvent(PlayerDeathEvent event) {
         if (plugin.getConfig().getBoolean("KeepInventory")) {
             event.setKeepInventory(true);
+            event.getDrops().clear();
+        }
+        if (plugin.getConfig().getBoolean("KeepInventory")) {
             event.setKeepLevel(true);
-        } else if (plugin.getConfig().getBoolean("KeepInventory")) {
-            event.setKeepInventory(false);
-            event.setKeepLevel(false);
+            event.setDroppedExp(0);
         }
     }
 }
