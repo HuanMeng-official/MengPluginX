@@ -29,7 +29,6 @@ public final class MengPluginX extends JavaPlugin {
         int pluginId = 18219;
         Metrics metrics = new Metrics(this, pluginId);
         metrics.addCustomChart(new Metrics.SimplePie("chart_id", () -> "My value"));
-        getServer().getScheduler().scheduleSyncDelayedTask(this,new TickPerSecond(),100L);
         saveResource("keywords.yml",false);
         getConfig().options().copyDefaults(true);
         saveDefaultConfig();
