@@ -36,8 +36,8 @@ public class SetGameMode implements CommandExecutor , TabExecutor {
                     player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "已将您的游戏模式更换为生存");
                     break;
             }
-        }else {
-            System.out.println(ChatColor.RED + "Error: Please let the player execute the command");
+        } else if (args.length == 0) {
+            sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RED + "Used: /gm <number>");
         }
         return false;
     }
