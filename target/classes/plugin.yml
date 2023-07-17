@@ -1,5 +1,5 @@
 name: MengPluginX
-version: '${project.version}'
+version: '9.0-r1'
 main: top.huanmeng.MengPluginX
 api-version: 1.13
 author: HuanMeng_

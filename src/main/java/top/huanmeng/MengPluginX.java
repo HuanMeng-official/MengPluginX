@@ -11,6 +11,8 @@ import top.huanmeng.Worlds.*;
 
 import java.util.Objects;
 
+import static top.huanmeng.Worlds.PrivateChat.privateChats;
+
 public final class MengPluginX extends JavaPlugin {
 
     @Override
@@ -33,12 +35,14 @@ public final class MengPluginX extends JavaPlugin {
         getConfig().options().copyDefaults(true);
         saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new PlayerJoinEvent(),this);
+        getServer().getPluginManager().registerEvents(new PlayerQuitEvent(),this);
         getServer().getPluginManager().registerEvents(new PlayerBedEnterEvent(),this);
         getServer().getPluginManager().registerEvents(new PlayerBedLeaveEvent(),this);
         getServer().getPluginManager().registerEvents(new BadWords(),this);
         getServer().getPluginManager().registerEvents(new KeepInventory(),this);
         getServer().getPluginManager().registerEvents(new AntiCreeper(),this);
         getServer().getPluginManager().registerEvents(new AntiEnderMan(),this);
+        getServer().getPluginManager().registerEvents(new PrivateChat(),this);
         Objects.requireNonNull(getCommand("mpx")).setExecutor(new CommandHelp());
         Objects.requireNonNull(getCommand("gm")).setExecutor(new SetGameMode());
         Objects.requireNonNull(getCommand("mpx_tps")).setExecutor(new GetTickPerSecond());
@@ -52,6 +56,7 @@ public final class MengPluginX extends JavaPlugin {
         Objects.requireNonNull(getCommand("mpx_ram")).setExecutor(new GetServerRam());
         Objects.requireNonNull(getCommand("search")).setExecutor(new InventorySearch());
         Objects.requireNonNull(getCommand("mpx_text")).setExecutor(new HolographicText());
+        Objects.requireNonNull(getCommand("mpx_private")).setExecutor(new PrivateChat());
         boolean badwords = getConfig().getBoolean("BadWords",true);
         boolean keepInventory = getConfig().getBoolean("KeepInventory", true);
         boolean antiCreeper = getConfig().getBoolean("AntiCreeper",true);
@@ -81,6 +86,7 @@ public final class MengPluginX extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        privateChats.clear();
         getLogger().info(ChatColor.DARK_RED + "MengPluginX is disabled");
     }
 }
