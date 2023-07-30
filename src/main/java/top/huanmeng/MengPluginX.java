@@ -15,6 +15,7 @@ import static top.huanmeng.Worlds.PrivateChat.privateChats;
 
 public final class MengPluginX extends JavaPlugin {
 
+    public static String m = ChatColor.YELLOW + "[幻梦娘]";
     @Override
     public void onLoad() {
         getLogger().info(ChatColor.DARK_RED + "MengPluginX is loading");
@@ -62,24 +63,24 @@ public final class MengPluginX extends JavaPlugin {
         boolean antiCreeper = getConfig().getBoolean("AntiCreeper",true);
         boolean antiEnderMan = getConfig().getBoolean("AntiEnderMan",true);
         if (badwords){
-            getLogger().info(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“BadWords”已开启");
+            getLogger().info(m + ChatColor.RESET + "功能“BadWords”已开启");
         }else {
-            getLogger().info(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“BadWords”未开启");
+            getLogger().info(m + ChatColor.RESET + "功能“BadWords”未开启");
         }
         if (keepInventory){
-            getLogger().info(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“KeepInventory”已开启");
+            getLogger().info(m + ChatColor.RESET + "功能“KeepInventory”已开启");
         }else {
-            getLogger().info(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“KeepInventory”未开启");
+            getLogger().info(m + ChatColor.RESET + "功能“KeepInventory”未开启");
         }
         if (antiCreeper){
-            getLogger().info(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“AntiCreeperBoom”已开启");
+            getLogger().info(m + ChatColor.RESET + "功能“AntiCreeperBoom”已开启");
         }else {
-            getLogger().info(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“AntiCreeperBoom”未开启");
+            getLogger().info(m + ChatColor.RESET + "功能“AntiCreeperBoom”未开启");
         }
         if (antiEnderMan){
-            getLogger().info(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“AntiEnderManPickupBlock”已开启");
+            getLogger().info(m + ChatColor.RESET + "功能“AntiEnderManPickupBlock”已开启");
         }else {
-            getLogger().info(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "功能“AntiEnderManPickupBloc”未开启");
+            getLogger().info(m + ChatColor.RESET + "功能“AntiEnderManPickupBloc”未开启");
         }
         getLogger().info(ChatColor.DARK_GREEN + "=========================");
     }

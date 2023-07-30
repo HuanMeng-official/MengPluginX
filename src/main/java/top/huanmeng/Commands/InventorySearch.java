@@ -11,6 +11,7 @@ import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
 import static org.bukkit.Bukkit.getServer;
+import static top.huanmeng.MengPluginX.m;
 
 public class InventorySearch implements CommandExecutor {
     @Override
@@ -25,19 +26,19 @@ public class InventorySearch implements CommandExecutor {
                             ItemStack[] contents = target.getInventory().getContents();
                             for (ItemStack item : contents){
                                 if (item != null && item.getType() == material){
-                                    sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + target.getName() + " 的背包中有 " + material.name() + "!");
+                                    sender.sendMessage(m + ChatColor.RESET + target.getName() + " 的背包中有 " + material.name() + "!");
                                     return true;
                                 }
                             }
-                            sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + target.getName() + " 的背包中没有 " + material.name() + "!");
+                            sender.sendMessage(m + ChatColor.RESET + target.getName() + " 的背包中没有 " + material.name() + "!");
                         }else {
-                            sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "无效的物品名: " + ChatColor.GREEN + args[1]);
+                            sender.sendMessage(m + ChatColor.RESET + "无效的物品名: " + ChatColor.GREEN + args[1]);
                         }
                     }else {
-                        sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "找不到该玩家: " + ChatColor.GREEN + args[0]);
+                        sender.sendMessage(m + ChatColor.RESET + "找不到该玩家: " + ChatColor.GREEN + args[0]);
                     }
                 }else {
-                    sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RED + "用法: /search <player> <item>");
+                    sender.sendMessage(m + ChatColor.RED + "用法: /search <player> <item>");
                 }
                 return true;
             }

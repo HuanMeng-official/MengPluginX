@@ -15,6 +15,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashMap;
 import java.util.Map;
 
+import static top.huanmeng.MengPluginX.m;
+
 public class PrivateChat implements Listener , CommandExecutor {
     public static HashMap<Player, Player> privateChats = new HashMap<>();
     @EventHandler
@@ -23,8 +25,8 @@ public class PrivateChat implements Listener , CommandExecutor {
         Player receiver = privateChats.get(sender);
         if (receiver != null) {
             String message = event.getMessage();
-            receiver.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.DARK_RED + "[私聊]" + ChatColor.AQUA + sender.getName() + ChatColor.RESET + message);
-            sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.DARK_RED + "[私聊]" + ChatColor.AQUA + sender.getName() + ChatColor.RESET + message);
+            receiver.sendMessage(m + ChatColor.DARK_RED + "[私聊]" + ChatColor.AQUA + sender.getName() + ChatColor.RESET + message);
+            sender.sendMessage(m + ChatColor.DARK_RED + "[私聊]" + ChatColor.AQUA + sender.getName() + ChatColor.RESET + message);
             event.setCancelled(true);
         }
     }
@@ -34,7 +36,7 @@ public class PrivateChat implements Listener , CommandExecutor {
         if (privateChats.containsKey(player)) {
             Player target = privateChats.get(player);
             privateChats.remove(player);
-            target.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.GREEN + player.getName() + ChatColor.RESET + "已经退出了服务器，你已经停止和他私聊了");
+            target.sendMessage(m + ChatColor.GREEN + player.getName() + ChatColor.RESET + "已经退出了服务器，你已经停止和他私聊了");
         }
         if (privateChats.containsValue(player)) {
             Player target = null;
@@ -46,7 +48,7 @@ public class PrivateChat implements Listener , CommandExecutor {
             }
             if (target != null) {
                 privateChats.remove(target);
-                target.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.GREEN + player.getName() + ChatColor.RESET + "已经退出了服务器，你已经停止和他私聊了");
+                target.sendMessage(m + ChatColor.GREEN + player.getName() + ChatColor.RESET + "已经退出了服务器，你已经停止和他私聊了");
             }
         }
     }
@@ -62,32 +64,32 @@ public class PrivateChat implements Listener , CommandExecutor {
                         if (privateChats.containsKey(player)) {
                             Player target = privateChats.get(player);
                             privateChats.remove(player);
-                            player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.GREEN + "你已经停止和" + target.getName() + "私聊了");
-                            target.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.GREEN + player.getName() + "已经停止和你私聊了");
+                            player.sendMessage(m + ChatColor.GREEN + "你已经停止和" + target.getName() + "私聊了");
+                            target.sendMessage(m + ChatColor.GREEN + player.getName() + "已经停止和你私聊了");
                         } else {
-                            player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RED + "你没有和任何人私聊，输入/mpx_private <玩家名>来开始私聊");
+                            player.sendMessage(m + ChatColor.RED + "你没有和任何人私聊，输入/mpx_private <玩家名>来开始私聊");
                         }
                     } else {
                         Player target = Bukkit.getPlayer(targetName);
                         if (target != null) {
                             if (target != player) {
                                 privateChats.put(player, target);
-                                player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.GREEN + "你已经开始和" + target.getName() + "私聊了，输入/mpx_private stop来停止私聊");
-                                target.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.GREEN + player.getName() + "已经开始和你私聊了，输入/mpx_private stop来停止私聊");
+                                player.sendMessage(m + ChatColor.GREEN + "你已经开始和" + target.getName() + "私聊了，输入/mpx_private stop来停止私聊");
+                                target.sendMessage(m + ChatColor.GREEN + player.getName() + "已经开始和你私聊了，输入/mpx_private stop来停止私聊");
                             } else {
-                                player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RED + "你不能和自己私聊");
+                                player.sendMessage(m + ChatColor.RED + "你不能和自己私聊");
                             }
                         } else {
-                            player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RED + "找不到玩家" + targetName);
+                            player.sendMessage(m + ChatColor.RED + "找不到玩家" + targetName);
                         }
                     }
                 } else if (args.length == 0) {
-                    player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RED + "命令格式错误，正确的格式是/mpx_private <玩家名>或者/mpx_private stop");
+                    player.sendMessage(m + ChatColor.RED + "命令格式错误，正确的格式是/mpx_private <玩家名>或者/mpx_private stop");
                 } else {
-                    player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RED + "命令格式错误，正确的格式是/mpx_private <玩家名>或者/mpx_private stop");
+                    player.sendMessage(m + ChatColor.RED + "命令格式错误，正确的格式是/mpx_private <玩家名>或者/mpx_private stop");
                 }
             } else {
-                sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RED + "只有玩家才能使用这个命令");
+                sender.sendMessage(m + ChatColor.RED + "只有玩家才能使用这个命令");
             }
             return true;
         }

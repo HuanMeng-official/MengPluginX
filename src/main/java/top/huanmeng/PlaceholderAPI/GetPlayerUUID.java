@@ -9,6 +9,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+import static top.huanmeng.MengPluginX.m;
+
 public class GetPlayerUUID implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
@@ -18,7 +20,7 @@ public class GetPlayerUUID implements CommandExecutor {
             String uuid = "%player_uuid%";
             uuid = PlaceholderAPI.setPlaceholders(target,uuid);
             if (target != null){
-                sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "该玩家的UUID为：" + ChatColor.GREEN + uuid);
+                sender.sendMessage(m + ChatColor.RESET + "该玩家的UUID为：" + ChatColor.GREEN + uuid);
             }
         }else {
             System.out.println(ChatColor.RED + "Error: Please let the player execute the command");

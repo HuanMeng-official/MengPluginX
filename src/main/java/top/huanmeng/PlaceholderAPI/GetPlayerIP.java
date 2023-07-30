@@ -9,6 +9,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+import  static top.huanmeng.MengPluginX.m;
+
 public class GetPlayerIP implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
@@ -18,7 +20,7 @@ public class GetPlayerIP implements CommandExecutor {
             String ip = "%player_ip%";
             ip = PlaceholderAPI.setPlaceholders(target,ip);
             if (target != null){
-                sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "该玩家的IP为：" + ChatColor.GREEN + ip);
+                sender.sendMessage(m + ChatColor.RESET + "该玩家的IP为：" + ChatColor.GREEN + ip);
             }
         }else {
             sender.sendMessage(ChatColor.RED + "Error: Please let the op execute the command");

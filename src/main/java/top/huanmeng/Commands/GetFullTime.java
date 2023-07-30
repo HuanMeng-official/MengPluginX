@@ -8,6 +8,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+import static top.huanmeng.MengPluginX.m;
+
 public class GetFullTime implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
@@ -15,7 +17,7 @@ public class GetFullTime implements CommandExecutor {
             Player player = (Player) sender;
             World world = player.getWorld();
             long full_time = world.getFullTime();
-            sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "当前世界的绝对时间：" + ChatColor.GREEN + full_time);
+            sender.sendMessage(m + ChatColor.RESET + "当前世界的绝对时间：" + ChatColor.GREEN + full_time);
         }else {
             System.out.println(ChatColor.RED + "Error: Please let the player execute the command");
         }

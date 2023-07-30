@@ -8,6 +8,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+import static top.huanmeng.MengPluginX.m;
+
 public class GetWorldSeed implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
@@ -15,7 +17,7 @@ public class GetWorldSeed implements CommandExecutor {
             Player player = (Player) sender;
             World world = player.getWorld();
             long seed = world.getSeed();
-            sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "种子：" + ChatColor.GREEN + seed);
+            sender.sendMessage(m + ChatColor.RESET + "种子：" + ChatColor.GREEN + seed);
             return true;
         }else {
             System.out.println(ChatColor.RED + "Error: Please let the player execute the command");

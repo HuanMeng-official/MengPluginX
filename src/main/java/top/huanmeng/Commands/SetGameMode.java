@@ -12,6 +12,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+import static top.huanmeng.MengPluginX.m;
+
 public class SetGameMode implements CommandExecutor , TabExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
@@ -21,23 +23,23 @@ public class SetGameMode implements CommandExecutor , TabExecutor {
             switch (mode) {
                 case "1":
                     player.setGameMode(GameMode.CREATIVE);
-                    player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "已将您的游戏模式更换为创造");
+                    player.sendMessage(m + ChatColor.RESET + "已将您的游戏模式更换为创造");
                     break;
                 case "2":
                     player.setGameMode(GameMode.ADVENTURE);
-                    player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "已将您的游戏模式更换为冒险");
+                    player.sendMessage(m + ChatColor.RESET + "已将您的游戏模式更换为冒险");
                     break;
                 case "3":
                     player.setGameMode(GameMode.SPECTATOR);
-                    player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "已将您的游戏模式更换为旁观");
+                    player.sendMessage(m + ChatColor.RESET + "已将您的游戏模式更换为旁观");
                     break;
                 case "0":
                     player.setGameMode(GameMode.SURVIVAL);
-                    player.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RESET + "已将您的游戏模式更换为生存");
+                    player.sendMessage(m + ChatColor.RESET + "已将您的游戏模式更换为生存");
                     break;
             }
         } else if (args.length == 0) {
-            sender.sendMessage(ChatColor.YELLOW + "[幻梦娘]" + ChatColor.RED + "Used: /gm <number>");
+            sender.sendMessage(m + ChatColor.RED + "Used: /gm <number>");
         }
         return false;
     }
