@@ -5,6 +5,7 @@ import org.bukkit.Server;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
@@ -18,8 +19,9 @@ public class GetOnlinePlayer implements CommandExecutor {
             Server server = player.getServer();
             int online = server.getOnlinePlayers().size();
             player.sendMessage(m + ChatColor.RESET + "当前服务器在线玩家数量：" + ChatColor.GREEN + online);
-        }else {
-            System.out.println(ChatColor.RED + "Error: Please let the player execute the command");
+        }else if (sender instanceof ConsoleCommandSender) {
+            ConsoleCommandSender consoleCommandSender = (ConsoleCommandSender) sender;
+            consoleCommandSender.sendMessage(ChatColor.RED + "Error: Please let the op execute the command");
         }
         return false;
     }

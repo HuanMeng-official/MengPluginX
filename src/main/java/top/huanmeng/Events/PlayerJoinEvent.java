@@ -13,7 +13,7 @@ import top.huanmeng.MengPluginX;
 public class PlayerJoinEvent implements Listener {
     Plugin plugin = MengPluginX.getPlugin(MengPluginX.class);
     @EventHandler
-    public void PlayerJoinEvent(org.bukkit.event.player.PlayerJoinEvent join){
+    public void PlayerJoin(org.bukkit.event.player.PlayerJoinEvent join){
         Player player = join.getPlayer();
         String name = join.getPlayer().getName();
         join.setJoinMessage(ChatColor.YELLOW + plugin.getConfig().getString("Characters") + ChatColor.RESET + "欢迎" + name + "加入" + plugin.getConfig().getString("Server"));

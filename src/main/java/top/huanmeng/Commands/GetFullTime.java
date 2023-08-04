@@ -5,6 +5,7 @@ import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
@@ -17,9 +18,10 @@ public class GetFullTime implements CommandExecutor {
             Player player = (Player) sender;
             World world = player.getWorld();
             long full_time = world.getFullTime();
-            sender.sendMessage(m + ChatColor.RESET + "当前世界的绝对时间：" + ChatColor.GREEN + full_time);
-        }else {
-            System.out.println(ChatColor.RED + "Error: Please let the player execute the command");
+            player.sendMessage(m + ChatColor.RESET + "当前世界的绝对时间：" + ChatColor.GREEN + full_time);
+        }else if (sender instanceof ConsoleCommandSender) {
+            ConsoleCommandSender consoleCommandSender = (ConsoleCommandSender) sender;
+            consoleCommandSender.sendMessage(ChatColor.RED + "Error: Please let the op execute the command");
         }
         return false;
     }

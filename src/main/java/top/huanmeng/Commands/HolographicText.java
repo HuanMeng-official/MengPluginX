@@ -1,10 +1,7 @@
 package top.huanmeng.Commands;
 
 import org.bukkit.ChatColor;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
-import org.bukkit.command.TabExecutor;
+import org.bukkit.command.*;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
@@ -29,8 +26,9 @@ public class HolographicText implements CommandExecutor , TabExecutor {
             entity.setVisible(false);
             entity.setGravity(false);
             return true;
-        }else {
-            System.out.println(ChatColor.RED + "Error: Please let the player execute the command");
+        }else if (sender instanceof  ConsoleCommandSender) {
+            ConsoleCommandSender consoleCommandSender = (ConsoleCommandSender) sender;
+            consoleCommandSender.sendMessage(ChatColor.RED + "Error: Please let the op execute the command");
         }
         return false;
     }

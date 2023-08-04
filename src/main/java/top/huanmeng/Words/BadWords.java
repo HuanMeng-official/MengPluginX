@@ -12,14 +12,13 @@ import org.bukkit.plugin.Plugin;
 
 import java.io.File;
 
-
 public class BadWords implements Listener {
     File file = new File(MengPluginX.getPlugin(MengPluginX.class).getDataFolder(),"keywords.yml");
     FileConfiguration config = YamlConfiguration.loadConfiguration(file);
     Plugin plugin = MengPluginX.getPlugin(MengPluginX.class);
     @EventHandler
     public void PlayerChat(AsyncPlayerChatEvent event) {
-        Player player = (Player) event.getPlayer();
+        Player player = event.getPlayer();
         String massage = event.getMessage();
         for (int i = 0; i < config.getStringList("key-words").size(); i++) {
             if (massage.contains(config.getStringList("key-words").get(i))) {

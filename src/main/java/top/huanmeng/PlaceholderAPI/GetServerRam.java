@@ -33,10 +33,12 @@ public class GetServerRam implements CommandExecutor , TabExecutor {
                 case "total":
                     player.sendMessage(m + ChatColor.RESET + "当前服务器总共内存：" + ChatColor.GREEN + total_ram + ChatColor.RESET + "MB");
                     break;
+                default:
+                    player.sendMessage(m + ChatColor.RED + "Used: /mpx_ram <used | free | total>");
             }
         } else if (sender instanceof ConsoleCommandSender) {
             ConsoleCommandSender consoleCommandSender = (ConsoleCommandSender) sender;
-            sender.sendMessage(ChatColor.RED + "Error: Please let the player execute the command");
+            consoleCommandSender.sendMessage(ChatColor.RED + "Error: Please let the player execute the command");
         }
         return false;
     }

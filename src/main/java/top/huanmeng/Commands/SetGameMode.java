@@ -2,10 +2,7 @@ package top.huanmeng.Commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
-import org.bukkit.command.TabExecutor;
+import org.bukkit.command.*;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
@@ -37,9 +34,12 @@ public class SetGameMode implements CommandExecutor , TabExecutor {
                     player.setGameMode(GameMode.SURVIVAL);
                     player.sendMessage(m + ChatColor.RESET + "已将您的游戏模式更换为生存");
                     break;
+                default:
+                    player.sendMessage(m + ChatColor.RED + "Used: /gm <number>");
             }
-        } else if (args.length == 0) {
-            sender.sendMessage(m + ChatColor.RED + "Used: /gm <number>");
+        } else if (sender instanceof ConsoleCommandSender) {
+            ConsoleCommandSender consoleCommandSender = (ConsoleCommandSender) sender;
+            consoleCommandSender.sendMessage(ChatColor.RED + "Error: Please let the op execute the command");
         }
         return false;
     }

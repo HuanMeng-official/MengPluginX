@@ -10,7 +10,7 @@ import top.huanmeng.MengPluginX;
 public class PlayerBedLeaveEvent implements Listener {
     Plugin plugin = MengPluginX.getPlugin(MengPluginX.class);
     @EventHandler
-    public void PlayerBedLeaveEvent(org.bukkit.event.player.PlayerBedLeaveEvent BedLeave){
+    public void PlayerBedLeave(org.bukkit.event.player.PlayerBedLeaveEvent BedLeave){
         Player getup = BedLeave.getPlayer();
         getup.sendMessage(ChatColor.YELLOW + plugin.getConfig().getString("Characters") + ChatColor.RESET + plugin.getConfig().getString("Getup"));
     }
