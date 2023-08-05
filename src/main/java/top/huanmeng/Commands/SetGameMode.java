@@ -36,6 +36,7 @@ public class SetGameMode implements CommandExecutor , TabExecutor {
                     break;
                 default:
                     player.sendMessage(m + ChatColor.RED + "Used: /gm <number>");
+                    break;
             }
         } else if (sender instanceof ConsoleCommandSender) {
             ConsoleCommandSender consoleCommandSender = (ConsoleCommandSender) sender;
