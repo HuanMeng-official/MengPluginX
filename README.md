@@ -44,7 +44,7 @@ MengPluginX的功能/优势：
 
 ## 📝 声明：
 
-**MengPluginX** 是基于AutomaticWelcomePlugin[^作者]的优化改良版本，拥有AutomaticWelcome的所有功能，并加以改进
+* **MengPluginX** 是基于AutomaticWelcomePlugin[^作者]的优化改良版本，拥有AutomaticWelcome的所有功能，并加以改进
 
 * **MengPluginX**建议您跟进每一次版本更新，以获得更好的体验
 
