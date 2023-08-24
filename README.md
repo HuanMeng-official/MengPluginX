@@ -2,7 +2,7 @@
 
 <h2>🌍支持语言/开源协议：</h2>
 
-![MIT](https://img.shields.io/badge/license-MIT-green) ![简体中文](https://img.shields.io/badge/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-100%25-blue) ![Java](https://img.shields.io/badge/Java-100%25-orange)
+[![CN](https://img.shields.io/badge/简体中文-Click-blue)](./README.md) [![EN](https://img.shields.io/badge/English-Click-blue)](./README/README.EN-us.md) ![MIT](https://img.shields.io/badge/License-MIT-green) ![Java](https://img.shields.io/badge/Java-100%25-orange)
 ---
 
 ## 🤔什么是MengPluginX？
@@ -22,7 +22,7 @@ MengPluginX的功能/优势：
 
 2. 小巧轻量，速度足够快
 
-3. 更新迭代速度快，可以保持周更
+3. 更新迭代速度快（大概？）
 
 4. 可自定义性强，拥有丰富的配置开关
 
@@ -42,7 +42,7 @@ MengPluginX的功能/优势：
 
 ---
 
-## 📝 声明：
+## 📝声明：
 
 * **MengPluginX** 是基于AutomaticWelcomePlugin[^作者]的优化改良版本，拥有AutomaticWelcome的所有功能，并加以改进
 
@@ -52,7 +52,7 @@ MengPluginX的功能/优势：
 
 ---
 
-## 🔨构建MengPluginX
+## 🔨构建MengPluginX：
 
 - `git clone https://github.com/HuanMeng-official/MengPluginX.git`
 
@@ -68,7 +68,7 @@ MengPluginX的功能/优势：
 
 ---
 
-## 📋数据统计
+## 📋数据统计：
 
 ![User](https://bstats.org/signatures/bukkit/MengPluginX.svg)
 
