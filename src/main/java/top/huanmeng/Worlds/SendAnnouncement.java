@@ -1,4 +1,4 @@
-package top.huanmeng.Worlds;
+package top.huanmeng.worlds;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -14,9 +14,9 @@ public class SendAnnouncement implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (sender.hasPermission("mpx.huanmeng.op")){
-            Bukkit.getServer().broadcastMessage(ChatColor.RED + "[公告]" + m + ChatColor.RESET + args[0]);
+            Bukkit.getServer().broadcastMessage(m + ChatColor.RED + "[公告]" + ChatColor.RESET + args[0]);
         } else if (sender instanceof ConsoleCommandSender) {
-            Bukkit.getServer().broadcastMessage(ChatColor.RED + "[公告]" + m + ChatColor.RESET + args[0]);
+            Bukkit.getServer().broadcastMessage(m + ChatColor.RED + "[公告]" + ChatColor.RESET + args[0]);
         }
         return false;
     }

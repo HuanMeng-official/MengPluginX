@@ -1,4 +1,4 @@
-package top.huanmeng.Words;
+package top.huanmeng.words;
 
 import top.huanmeng.MengPluginX;
 import org.bukkit.ChatColor;

@@ -1,4 +1,4 @@
-package top.huanmeng.PlaceholderAPI;
+package top.huanmeng.placeholder;
 
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.ChatColor;

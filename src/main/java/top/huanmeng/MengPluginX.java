@@ -3,12 +3,12 @@ package top.huanmeng;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
-import top.huanmeng.Commands.*;
-import top.huanmeng.PlaceholderAPI.*;
-import top.huanmeng.Events.*;
-import top.huanmeng.Tools.*;
-import top.huanmeng.Words.*;
-import top.huanmeng.Worlds.*;
+import top.huanmeng.commands.*;
+import top.huanmeng.placeholder.*;
+import top.huanmeng.events.*;
+import top.huanmeng.tools.*;
+import top.huanmeng.words.*;
+import top.huanmeng.worlds.*;
 
 import java.util.Objects;
 import java.util.logging.Logger;

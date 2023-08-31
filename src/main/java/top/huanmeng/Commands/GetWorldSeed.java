@@ -1,4 +1,4 @@
-package top.huanmeng.Commands;
+package top.huanmeng.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.World;

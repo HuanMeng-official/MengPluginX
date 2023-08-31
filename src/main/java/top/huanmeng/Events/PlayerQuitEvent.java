@@ -1,4 +1,4 @@
-package top.huanmeng.Events;
+package top.huanmeng.events;
 
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;

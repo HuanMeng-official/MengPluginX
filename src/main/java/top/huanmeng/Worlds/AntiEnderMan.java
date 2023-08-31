@@ -1,4 +1,4 @@
-package top.huanmeng.Worlds;
+package top.huanmeng.worlds;
 
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
