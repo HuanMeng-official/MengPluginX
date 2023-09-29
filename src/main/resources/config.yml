@@ -12,6 +12,11 @@ AntiCreeper: false
 #阻止末影人破坏方块
 AntiEnderMan: false
 
+#该项为玩家上床提示开关
+BedEnter: false
+#该项为玩家起床提示开关
+BedLeave: false
+
 #该项为欢迎人物
 Characters: '[幻梦娘]'
 #该项为欢迎语句的服务器提示名称
