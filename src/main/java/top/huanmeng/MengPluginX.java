@@ -6,7 +6,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import top.huanmeng.commands.*;
 import top.huanmeng.placeholder.*;
 import top.huanmeng.events.*;
-import top.huanmeng.tools.*;
 import top.huanmeng.words.*;
 import top.huanmeng.worlds.*;
 
@@ -30,9 +29,6 @@ public final class MengPluginX extends JavaPlugin {
         logger.info(ChatColor.GOLD + "| |\\/| | |_)  \\  /");
         logger.info(ChatColor.GOLD + "| |  | |  __/ /  \\");
         logger.info(ChatColor.GOLD + "|_|  |_|_|  /_/\\_\\");
-        int pluginId = 18219;
-        Metrics metrics = new Metrics(this, pluginId);
-        metrics.addCustomChart(new Metrics.SimplePie("chart_id", () -> "My value"));
         saveResource("keywords.yml",false);
         getConfig().options().copyDefaults(true);
         saveDefaultConfig();
