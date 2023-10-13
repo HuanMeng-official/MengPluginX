@@ -67,8 +67,4 @@ How to use the built MengPluginX, please see above
 
 ---
 
-## 📋Data statistics:
-
-![User](https://bstats.org/signatures/bukkit/MengPluginX.svg)
-
 [^作者]: 由[幻梦official](https://space.bilibili.com/626446902)开发，但是因为代码稀烂以及各种原因最终停更
