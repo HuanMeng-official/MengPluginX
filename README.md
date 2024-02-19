@@ -1,1 +1,1 @@
-请使用(MengServerX)[https://github.com/HuanMeng-official/MengServerX]
+请使用[MengServerX](https://github.com/HuanMeng-official/MengServerX)
